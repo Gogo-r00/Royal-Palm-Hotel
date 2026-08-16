@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #E8E1D5;
+    color: #071525;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100px;
+
+    padding: 10px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #061321,
+        #102B43,
+        #1C1C1C
+    );
+
+    border-bottom: 1px solid #C9A227;
+}
+
+.Main-image img {
+    width: 160px;
+    display: block;
+    margin: 0 10px 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+    gap: 40px;
+}
+
+header nav a {
+    color: #F4EFE6;
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    color: #D4AF37;
+    transform: translateY(-3px);
+}
+
+header button {
+    border: 1px solid #D4AF37;
+
+    background: transparent;
+
+    color: #F4EFE6;
+
+    font-size: 17px;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+header button:hover {
+    background: #D4AF37;
+    color: #071525;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 850px;
+
+    color: #FFFFFF;
+
+    text-align: center;
+
+    background-image: url(images/hotel3.png);
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    font-size: 40px;
+
+    overflow: hidden;
+}
+
+
+/* انتقال من الـHero للـAbout */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 120px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #E8E1D5
+    );
+
+    pointer-events: none;
+}
+
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+
+    color: #FFFFFF;
+
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    margin: 20px;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.8);
+
+    transition:
+        color 0.5s ease,
+        transform 0.3s ease;
+}
+
+.hero h1:hover {
+    color: #D4AF37;
+
+    transform: translateY(-5px);
+}
+
+
+.hero button {
+    position: relative;
+    z-index: 2;
+
+    border: 1px solid #D4AF37;
+
+    background: linear-gradient(
+        135deg,
+        #071525,
+        #12324D
+    );
+
+    color: #FFFFFF;
+
+    font-size: 20px;
+
+    padding: 16px 30px;
+
+    border-radius: 8px;
+
+    margin: 40px;
+
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background: #D4AF37;
+
+    color: #071525;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.ABOUT-HOTEL {
+    position: relative;
+
+    width: 85%;
+    min-height: 600px;
+
+    margin: 100px auto;
+
+    /*
+       لون دافئ بين الأبيض والبيج
+       عشان يربط الـHero بالـFooter
+    */
+    background: #E8E1D5;
+
+    box-shadow:
+        0 15px 40px rgba(7, 21, 37, 0.10);
+}
+
+
+.about-image {
+    position: absolute;
+
+    width: 40%;
+    height: 620px;
+
+    left: -8%;
+    top: -30px;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.28);
+}
+
+
+.ABOUT {
+    margin-left: 32%;
+
+    padding: 40px 50px;
+}
+
+
+.ABOUT span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #9A7A42;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.ABOUT h2 {
+    margin-bottom: 25px;
+
+    color: #8A5A3B;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    line-height: 1.05;
+}
+
+
+.ABOUT p {
+    margin-bottom: 22px;
+
+    color: #55524D;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    min-height: 360px;
+
+    padding: 70px 8% 25px;
+
+    background: linear-gradient(
+        135deg,
+        #061321,
+        #102B43,
+        #151515
+    );
+
+    border-top: 1px solid #D4AF37;
+
+    color: #F4EFE6;
+}
+
+
+/* =========================
+   FOOTER CONTENT
+========================= */
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.footer-brand {
+    width: 30%;
+}
+
+.footer-brand img {
+    width: 170px;
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 25px;
+}
+
+.footer-brand p {
+    max-width: 250px;
+
+    color: #aaa9a3;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+footer {
+    position: relative;
+
+    width: 100%;
+    min-height: 400px;
+
+    padding: 80px 8% 30px;
+
+    background: #071525;
+
+    color: #F4EFE6;
+
+    border-top: 1px solid #D4AF37;
+}
+
+
+/* انتقال ناعم من لون الـAbout إلى الفوتر */
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    top: -80px;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(232, 225, 213, 0),
+        #071525
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   FOOTER CONTENT
+========================= */
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.footer-brand {
+    width: 30%;
+}
+
+.footer-brand img {
+    width: 170px;
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    max-width: 250px;
+
+    color: #BDB8AF;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.footer-info {
+    width: 60%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.footer-item {
+    min-width: 150px;
+}
+
+
+.footer-item h3 {
+    margin-bottom: 15px;
+
+    color: #D4AF37;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-item p {
+    color: #F4EFE6;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 60px auto 0;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+
+.footer-bottom p {
+    color: #85827C;
+
+    font-size: 13px;
+}
